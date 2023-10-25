@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Inter } from 'next/font/google'
 import React from "react";
 
-const detailpage = ({data, nomor}) => {
+const DetailPage = ({data, nomor}) => {
     console.log("nama yuda adalah " + JSON.stringify(data.forms[0].name));
     const name = data.forms[0].name;
     const [openTab, setOpenTab] = React.useState(1);
@@ -216,7 +216,7 @@ const detailpage = ({data, nomor}) => {
 }
 
 
-export default detailpage
+export default DetailPage
 
 export async function getServerSideProps(context) {
     const nomor = context.query.nomor;
